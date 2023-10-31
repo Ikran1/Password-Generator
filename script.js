@@ -118,7 +118,6 @@ function getPasswordOptions() {
   return passwordOptions;
 }
 
-getPasswordOptions();
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -127,9 +126,43 @@ function getRandom(arr) {
   return randomArrayElement;
 }
 
+
 // Function to generate password with user input
 function generatePassword() {
+  var options = getPasswordOptions();
+  if (!options) {
+    return "";
+  }
 
+  var potentialCharacters = [];
+  var definiteCharacters = [];
+
+  if (options.specialCharacters) {
+    potentialCharacters = potentialCharacters.concat(specialCharacters);
+    definiteCharacters .push(getRandom(specialCharacters));
+  }
+
+  if (options.numericCharacters) {
+    potentialCharacters = potentialCharacters.concat(numericCharacters);
+    definiteCharacters .push(getRandom(numericCharacters));
+  }
+
+  if (options.lowerCasedCharacters) {
+    potentialCharacters = potentialCharacters.concat(lowerCasedCharacters);
+    definiteCharacters .push(getRandom(lowerCasedCharacters));
+  }
+
+  if (options.upperCasedCharacters) {
+    potentialCharacters = potentialCharacters.concat(upperCasedCharacters);
+    definiteCharacters .push(getRandom(upperCasedCharacters));
+  }
+
+  for (var i = definiteCharacters.length; i < options.length; i++) {
+    var randomCharacter = getRandom(potentialCharacters);
+    definiteCharacters .push(randomCharacter);
+  }
+
+  return definiteCharacters .join('');
 }
 
 // Get references to the #generate element
