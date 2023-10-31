@@ -26,6 +26,8 @@ Open index.html in your web browser.
 ![password generator demo 2](./images/step%202.png)
 ![password generator demo 3](./images/step%203.png)
 
+URL to deployed application: https://ikran1.github.io/Password-Generator
+
 ## Credit
 
 Also collaborated with Qaleh Saleh on this challenge: GitHub: https://github.com/Qaleh1000
