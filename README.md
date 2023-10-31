@@ -36,6 +36,6 @@ Below are the links to the websites I have used for my images:
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
 - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 
-## Liscence
+## Licence
 
 Please refer to the liscence in the repository.
